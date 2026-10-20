@@ -185,8 +185,11 @@
     .hero .logo{width:74%;margin-bottom:26px}
     .offer{grid-template-columns:1fr}
     .product{grid-template-columns:1fr}
-    .shot{min-height:0}
-    .shot img{height:320px}
+    .shot{min-height:0;order:0 !important}
+    .detail{order:1 !important;padding:26px 22px 24px}
+    .product:nth-of-type(even) .shot{order:0}
+    .product:nth-of-type(even) .detail{order:1}
+    .shot img{height:300px}
     .colsplit,.angles,.rules{grid-template-columns:1fr}
     .step{grid-template-columns:1fr;gap:5px}
   }
