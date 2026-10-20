@@ -1,0 +1,408 @@
+<title>Rosabella Creator Brief</title>
+
+<style>
+  :root{
+    --navy:#0B2A3C; --blue:#1666AB; --teal:#0D8176; --green:#0E8F5E; --mint:#4FC9A4;
+    --ground:#F1F7F6; --panel:#FFFFFF; --panel-2:#F7FBFA;
+    --ink:#0B2A3C; --ink-soft:#4D6977; --ink-faint:#8AA3AE;
+    --rule:#D5E4E2; --rule-strong:#0B2A3C; --accent-n:#0D8176;
+    --grad:linear-gradient(118deg,#1666AB 0%,#0D8176 52%,#0E8F5E 100%);
+    --display:"Avenir Next Condensed","Futura","Helvetica Neue",system-ui,sans-serif;
+    --body:"Avenir Next",Avenir,"Segoe UI",system-ui,-apple-system,sans-serif;
+    --quote:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --figure:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#07202D; --panel:#0E2C3B; --panel-2:#0A2634;
+      --ink:#EAF4F3; --ink-soft:#A6C2CC; --ink-faint:#70919E;
+      --rule:#1B3F4F; --rule-strong:#EAF4F3; --accent-n:#6FE0BC;
+      --mint:#6FE0BC;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#07202D; --panel:#0E2C3B; --panel-2:#0A2634;
+    --ink:#EAF4F3; --ink-soft:#A6C2CC; --ink-faint:#70919E;
+    --rule:#1B3F4F; --rule-strong:#EAF4F3; --mint:#6FE0BC; --accent-n:#6FE0BC;
+  }
+  :root[data-theme="light"]{
+    --ground:#F1F7F6; --panel:#FFFFFF; --panel-2:#F7FBFA;
+    --ink:#0B2A3C; --ink-soft:#4D6977; --ink-faint:#8AA3AE;
+    --rule:#D5E4E2; --rule-strong:#0B2A3C; --mint:#4FC9A4; --accent-n:#0D8176;
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);
+    font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px 100px}
+  section{margin-top:76px}
+  h1,h2,h3{margin:0;text-wrap:balance}
+  img{max-width:100%;display:block}
+
+  /* ---- hero ---- */
+  .hero{
+    background-image:linear-gradient(102deg,rgba(6,34,52,.80) 0%,rgba(6,34,52,.46) 44%,rgba(6,34,52,.04) 74%),url("img/banner.jpg");
+    background-size:cover;background-position:center;position:relative;overflow:hidden;
+    color:#fff;padding:92px 52px 82px;margin-top:28px;
+  }
+  .hero .logo{width:min(340px,62%);height:auto;margin:0 0 34px;position:relative}
+  .hero .eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;opacity:.8;font-weight:700}
+  .hero h1{font-family:var(--display);font-weight:700;letter-spacing:-.035em;
+    font-size:clamp(52px,10vw,112px);line-height:.88;margin:20px 0 0;text-transform:uppercase}
+  .hero h1 span{display:block;opacity:.52}
+  .hero p{margin:26px 0 0;max-width:46ch;font-size:19px;opacity:.95;line-height:1.5;position:relative}
+
+  .offer{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+    border:1px solid var(--rule);margin-top:0;border-top:0}
+  .ocell{background:var(--panel);padding:32px 26px 30px}
+  .ocell .big{font-family:var(--display);font-size:clamp(46px,7vw,68px);font-weight:700;
+    letter-spacing:-.045em;display:block;margin-bottom:6px;line-height:.9;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .ocell p{margin:0;font-size:14px;color:var(--ink-soft)}
+  .explain{max-width:64ch;color:var(--ink-soft);margin:24px 0 0;font-size:15px}
+  .explain b{color:var(--ink)}
+
+  /* ---- section heads ---- */
+  .shead{display:flex;align-items:baseline;gap:16px;padding-bottom:14px;position:relative}
+  .shead:after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--grad)}
+  .shead h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,5vw,52px);
+    letter-spacing:-.035em;text-transform:uppercase;line-height:1}
+  .shead .count{margin-left:auto;font-family:var(--figure);font-size:12px;color:var(--ink-faint)}
+
+  /* ---- product ---- */
+  .product{display:grid;grid-template-columns:.86fr 1.14fr;background:var(--panel);
+    border:1px solid var(--rule);margin-top:26px;overflow:hidden}
+  .product:nth-of-type(even) .shot{order:2}
+  .product:nth-of-type(even) .detail{order:1}
+  .shot{background:var(--shotbg);min-height:380px;overflow:hidden}
+  .shot img{width:100%;height:100%;object-fit:cover;display:block}
+  .detail{padding:34px 34px 30px}
+  .tag{display:inline-block;background:var(--tint);color:#fff;
+    font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:5px 10px}
+  .product h3{font-family:var(--display);font-weight:700;font-size:clamp(34px,4.4vw,48px);
+    line-height:.96;margin:14px 0 0;letter-spacing:-.035em;text-transform:uppercase}
+  .sub{color:var(--ink-faint);font-size:13.5px;margin-top:6px}
+
+  .price{display:flex;align-items:baseline;gap:12px;margin-top:22px;flex-wrap:wrap}
+  .price .was{font-family:var(--figure);font-size:16px;color:var(--ink-faint);
+    text-decoration:line-through;font-variant-numeric:tabular-nums}
+  .price .now{font-family:var(--display);font-size:clamp(40px,5vw,56px);font-weight:700;
+    color:var(--tint);letter-spacing:-.045em;font-variant-numeric:tabular-nums;line-height:.9}
+  .price .off{font-size:13px;color:var(--ink-soft)}
+
+  .commrow{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);
+    border:1px solid var(--rule);margin-top:20px}
+  .commrow > div{background:var(--panel-2);padding:13px 16px}
+  .commrow .lbl{display:block;font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--ink-faint);font-weight:700}
+  .commrow .val{font-family:var(--display);font-size:30px;font-weight:700;letter-spacing:-.03em;
+    font-variant-numeric:tabular-nums;color:var(--ink)}
+
+  .colsplit{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:26px}
+  .minihead{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
+    color:var(--ink-faint);border-bottom:3px solid var(--rule-strong);padding-bottom:6px;margin-bottom:4px}
+  .claims{list-style:none;margin:0;padding:0}
+  .claims li{padding:9px 0 9px 20px;border-bottom:1px solid var(--rule);font-size:14.5px;position:relative}
+  .claims li:before{content:"";position:absolute;left:0;top:17px;width:9px;height:9px;
+    border-radius:50%;background:var(--tint)}
+  .frow{display:flex;justify-content:space-between;gap:14px;padding:9px 0;
+    border-bottom:1px solid var(--rule);font-size:13.5px}
+  .frow span:first-child{color:var(--ink-soft)}
+  .frow span:last-child{text-align:right;font-family:var(--figure);font-variant-numeric:tabular-nums}
+
+  .note{margin-top:24px;padding-top:18px;border-top:1px solid var(--rule)}
+  .note b{display:block;font-size:14px;margin-bottom:4px}
+  .note p{margin:0;font-size:15px;color:var(--ink-soft);font-family:var(--quote);
+    font-style:italic;line-height:1.55}
+
+  /* ---- angles ---- */
+  .angles{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);
+    border:1px solid var(--rule);margin-top:26px;counter-reset:ang}
+  .angle{background:var(--panel);padding:28px;counter-increment:ang;position:relative}
+  .angle:before{content:counter(ang,decimal-leading-zero);position:absolute;right:22px;top:20px;
+    font-family:var(--display);font-size:46px;font-weight:700;line-height:1;
+    color:var(--rule);letter-spacing:-.04em}
+  .angle .n{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent-n)}
+  .angle h3{font-family:var(--display);font-size:27px;font-weight:700;margin:9px 0 7px;
+    letter-spacing:-.03em;text-transform:uppercase;line-height:1;padding-right:52px}
+  .angle p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+  .angle .hook{margin-top:16px;padding:13px 15px;background:var(--panel-2);
+    font-family:var(--quote);font-style:italic;font-size:16px;line-height:1.45;
+    border-left:3px solid;border-image:var(--grad) 1}
+
+  /* ---- rules ---- */
+  .rules{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:26px}
+  .rulecol h3{font-family:var(--display);font-size:26px;letter-spacing:-.02em;text-transform:uppercase;
+    font-weight:700;padding-bottom:10px;border-bottom:3px solid currentColor;margin:0}
+  .rulecol.do h3{color:var(--green)}
+  .rulecol.dont h3{color:#C2187F}
+  .rulecol ul{list-style:none;margin:0;padding:0}
+  .rulecol li{padding:15px 0;border-bottom:1px solid var(--rule)}
+  .rulecol li b{display:block;font-size:14.5px;margin-bottom:3px}
+  .rulecol li span{font-size:13.5px;color:var(--ink-soft)}
+
+  .banned{margin-top:26px;border:1px solid #C2187F;padding:22px}
+  .banned h4{margin:0 0 10px;font-family:var(--display);font-size:24px;letter-spacing:-.02em;
+    text-transform:uppercase;color:#C2187F}
+  .banned p{margin:0 0 14px;font-size:14.5px;color:var(--ink-soft);max-width:68ch}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-family:var(--body);font-weight:600;font-size:13.5px;background:#C2187F;
+    color:#fff;padding:7px 13px}
+
+  /* ---- timeline ---- */
+  .timeline{margin-top:26px;border-top:2px solid var(--rule-strong)}
+  .step{display:grid;grid-template-columns:132px 1fr;gap:26px;padding:20px 0;border-bottom:1px solid var(--rule)}
+  .step .when{font-family:var(--display);font-size:19px;font-weight:700;color:var(--accent-n);
+    text-transform:uppercase;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+  .step b{display:block;font-family:var(--display);font-size:21px;font-weight:700;
+    text-transform:uppercase;letter-spacing:-.02em;margin-bottom:4px}
+  .step p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+  .after{max-width:64ch;color:var(--ink-soft);margin:22px 0 0;font-size:15px}
+  .after b{color:var(--ink)}
+
+  .disclaimer{margin-top:50px;padding:20px;border:1px solid var(--rule);background:var(--panel)}
+  .disclaimer strong{display:block;margin-bottom:8px;font-size:14px}
+  .disclaimer code{font-family:var(--figure);font-size:13px;color:var(--ink);line-height:1.7}
+  .footnote{margin-top:26px;font-size:13px;color:var(--ink-faint);max-width:72ch}
+
+  @media (max-width:860px){
+    .hero{padding:44px 26px 40px}
+    .hero .logo{width:74%;margin-bottom:26px}
+    .offer{grid-template-columns:1fr}
+    .product{grid-template-columns:1fr}
+    .shot{min-height:0}
+    .shot img{height:320px}
+    .colsplit,.angles,.rules{grid-template-columns:1fr}
+    .step{grid-template-columns:1fr;gap:5px}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+  <header class="hero">
+    <img class="logo" src="img/logo.png" alt="Rosabella">
+    <div class="eyebrow">TikTok Shop USA &middot; Affiliate programme</div>
+    <h1>Creator<span>Brief</span></h1>
+    <p>What you earn, the angles that work, and the rules that keep your videos up.</p>
+  </header>
+
+  <div class="offer">
+    <div class="ocell"><span class="big">25%</span><p>On organic sales &mdash; everything your video earns on its own.</p></div>
+    <div class="ocell"><span class="big">10%</span><p>On ad-driven sales, once we put paid spend behind your video.</p></div>
+    <div class="ocell"><span class="big">2&ndash;14d</span><p>The window in which we review your video for paid amplification.</p></div>
+  </div>
+
+  <p class="explain">Two rates, and the difference matters. Anything your video earns on its own pays <b>25%</b>. When we decide a video is working and put ad budget behind it, sales from that paid reach pay <b>10%</b> &mdash; a lower rate on volume you would never have reached on your own.</p>
+
+  <section>
+    <div class="shead"><h2>The products</h2><span class="count">03 featured</span></div>
+
+    <article class="product" style="--tint:#0D8176;--tintsoft:#E3F0EE;--shotbg:#ABD6D4">
+      <div class="shot">
+        <img src="img/gluta.jpg" alt="Liposomal Glutathione bottle">
+      </div>
+      <div class="detail">
+        <span class="tag">Hero product</span>
+        <h3>Liposomal Glutathione</h3>
+        <div class="sub">60 capsules &middot; 30 day supply &middot; single bottle</div>
+
+        <div class="price">
+          <span class="was">$44.99</span>
+          <span class="now">$24.99</span>
+          <span class="off">44% off &middot; free shipping</span>
+        </div>
+
+        <div class="commrow">
+          <div><span class="lbl">Organic sale &mdash; 25%</span><span class="val">$6.25</span></div>
+          <div><span class="lbl">Ad-driven sale &mdash; 10%</span><span class="val">$2.50</span></div>
+        </div>
+
+        <div class="minihead">Claims you may use</div>
+        <ul class="claims">
+          <li>Enhanced absorption</li>
+          <li>Cellular defense</li>
+          <li>Immune &amp; detox support</li>
+        </ul>
+
+        <div class="note">
+          <b>Why it sells</b>
+          <p>The one audiences already search for by name. Skin-first framing beats general wellness framing.</p>
+        </div>
+      </div>
+    </article>
+    <article class="product" style="--tint:#C2187F;--tintsoft:#FBE8F3;--shotbg:#5F1547">
+      <div class="shot">
+        <img src="img/beet.jpg" alt="Beetroot 1300mg bottle">
+      </div>
+      <div class="detail">
+        <span class="tag">Read the rules first</span>
+        <h3>Beetroot 1300mg</h3>
+        <div class="sub">60 capsules &middot; 30 day supply &middot; 1300mg per serving</div>
+
+        <div class="price">
+          <span class="was">$36.99</span>
+          <span class="now">$21.99</span>
+          <span class="off">41% off &middot; free shipping</span>
+        </div>
+
+        <div class="commrow">
+          <div><span class="lbl">Organic sale &mdash; 25%</span><span class="val">$5.50</span></div>
+          <div><span class="lbl">Ad-driven sale &mdash; 10%</span><span class="val">$2.20</span></div>
+        </div>
+
+        <div class="minihead">Claims you may use</div>
+        <ul class="claims">
+          <li>Assists athletic performance</li>
+          <li>Aids healthy circulation</li>
+        </ul>
+
+        <div class="note">
+          <b style="color:#C2187F">Stay inside the label</b>
+          <p>Performance and circulation language is on the label and fine. Anything about blood pressure is not.</p>
+        </div>
+      </div>
+    </article>
+    <article class="product" style="--tint:#2BA833;--tintsoft:#E6F5E7;--shotbg:#105F0C">
+      <div class="shot">
+        <img src="img/moringa.jpg" alt="Moringa &middot; 2-Pack bottle">
+      </div>
+      <div class="detail">
+        <span class="tag">Best entry price</span>
+        <h3>Moringa &middot; 2-Pack</h3>
+        <div class="sub">2 bottles &middot; 60 capsules each &middot; 100% pure</div>
+
+        <div class="price">
+          <span class="was">$49.99</span>
+          <span class="now">$24.99</span>
+          <span class="off">50% off &middot; free shipping</span>
+        </div>
+
+        <div class="commrow">
+          <div><span class="lbl">Organic sale &mdash; 25%</span><span class="val">$6.25</span></div>
+          <div><span class="lbl">Ad-driven sale &mdash; 10%</span><span class="val">$2.50</span></div>
+        </div>
+
+        <div class="minihead">Claims you may use</div>
+        <ul class="claims">
+          <li>Supports a good night&rsquo;s sleep</li>
+          <li>Supports healthy joints</li>
+          <li>Supports healthy energy levels</li>
+        </ul>
+
+        <div class="note">
+          <b>Note on pack size</b>
+          <p>No single-bottle listing &mdash; the 2-pack is the entry SKU.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <div class="shead"><h2>Angles that work</h2><span class="count">pick one per video</span></div>
+    <div class="angles">
+      <div class="angle">
+        <div class="n">Borrowed authority</div>
+        <h3>Green screen a credible clip</h3>
+        <p>React to a doctor, researcher or news segment discussing the ingredient. The authority does the convincing; you make the product bridge.</p>
+        <div class="hook">&ldquo;A dermatologist just explained why glutathione does this to your skin&hellip;&rdquo;</div>
+      </div>
+      <div class="angle">
+        <div class="n">Self-recognition</div>
+        <h3>Name the problem first</h3>
+        <p>Open on the exact thing the viewer sees in the mirror. Specific beats flattering &mdash; it stops the scroll because it feels personal.</p>
+        <div class="hook">&ldquo;If your skin looks dull like this by 2pm, here&rsquo;s why&hellip;&rdquo;</div>
+      </div>
+      <div class="angle">
+        <div class="n">Buyer protection</div>
+        <h3>What to check before you buy</h3>
+        <p>Teach the viewer how to judge the category, then show the product passing the test you just set. Positions you as useful rather than selling.</p>
+        <div class="hook">&ldquo;Before you buy any glutathione, check this one thing on the label.&rdquo;</div>
+      </div>
+      <div class="angle">
+        <div class="n">Routine in context</div>
+        <h3>Where it sits in your day</h3>
+        <p>Show the product inside a real routine rather than alone on a counter. Lowest production cost of any angle and a consistently steady performer.</p>
+        <div class="hook">&ldquo;My 6am stack, in the order I actually take it.&rdquo;</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><h2>Content rules</h2><span class="count">non-negotiable</span></div>
+    <div class="rules">
+      <div class="rulecol do">
+        <h3>Do</h3>
+        <ul>
+          <li><b>Stick to the claims on the label</b><span>If it is not printed on the bottle or written here, do not say it.</span></li>
+          <li><b>Say that results vary</b><span>Whenever you show a personal result.</span></li>
+          <li><b>Use supportive language</b><span>&ldquo;Supports&rdquo;, &ldquo;may help&rdquo;. Possibility, never promise.</span></li>
+          <li><b>Tag it as a paid promotion</b><span>Use TikTok&rsquo;s own disclosure toggle.</span></li>
+        </ul>
+      </div>
+      <div class="rulecol dont">
+        <h3>Don&rsquo;t</h3>
+        <ul>
+          <li><b>Never name a disease or condition</b><span>No treating, curing or managing anything.</span></li>
+          <li><b>Never present as a doctor</b><span>Unless you are licensed.</span></li>
+          <li><b>No guaranteed or instant results</b><span>Nothing &ldquo;will&rdquo; happen. No overnight claims.</span></li>
+          <li><b>Do not invent specs</b><span>No dosages or ingredients that are not on the label.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="banned">
+      <h4>Language that gets videos taken down</h4>
+      <p>These are supplements, not medicine. Any phrasing that implies treating, curing or managing a health condition puts the video and your account at risk &mdash; and if we have put spend behind it, that spend is lost too. Avoid these entirely:</p>
+      <div class="chips">
+        <span class="chip">lowers blood pressure</span>
+        <span class="chip">cures</span>
+        <span class="chip">treats</span>
+        <span class="chip">reverses</span>
+        <span class="chip">prevents</span>
+        <span class="chip">clinically proven</span>
+        <span class="chip">better than medication</span>
+        <span class="chip">doctor recommended</span>
+        <span class="chip">FDA approved</span>
+        <span class="chip">detoxes your liver</span>
+        <span class="chip">guaranteed results</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><h2>How your video gets budget</h2><span class="count">the boost process</span></div>
+    <p class="after" style="margin-top:20px">We put paid spend behind creator videos that are already working.</p>
+    <div class="timeline">
+      <div class="step">
+        <div class="when">Day 0</div>
+        <div><b>You post</b><p>Tag the product correctly so the sale is attributed to you.</p></div>
+      </div>
+      <div class="step">
+        <div class="when">Day 0&ndash;2</div>
+        <div><b>The algorithm tests it</b><p>The platform gets a clear run at your video first.</p></div>
+      </div>
+      <div class="step">
+        <div class="when">Day 2&ndash;14</div>
+        <div><b>We review and boost</b><p>Videos showing real return get ad budget behind them, and strong performers get scaled further.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><h2>Samples</h2><span class="count">how to request</span></div>
+    <div class="timeline">
+      <div class="step">
+        <div class="when">Request</div>
+        <div><b>Apply through TikTok Shop</b><p>Send the sample request from the product page in Seller Center, not by DM.</p></div>
+      </div>
+      <div class="step">
+        <div class="when">Approval</div>
+        <div><b>We review your account</b><p>Recent posting activity, audience fit and category are all considered.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <p class="footnote">Prices change during campaign periods &mdash; check the live listing before filming a price callout.</p>
+
+</div>
