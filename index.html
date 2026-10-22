@@ -191,6 +191,10 @@
     .product:nth-of-type(even) .detail{order:1}
     .shot img{height:300px}
     .colsplit,.angles,.rules{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr}
+    .formula{grid-template-columns:1fr 1fr}
+    .chan div{grid-template-columns:1fr;gap:2px}
+    .seven div{grid-template-columns:44px 1fr}
     .step{grid-template-columns:1fr;gap:5px}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -205,7 +209,7 @@
 
   <header class="hero">
     <img class="logo" src="img/logo.png" alt="Rosabella">
-    <div class="eyebrow">TikTok Shop USA &middot; Affiliate programme</div>
+    <div class="eyebrow">Rosabella &middot; Creator Field Guide</div>
     <h1>Creator<span>Brief</span></h1>
     <p>What you earn, the angles that work, and the rules that keep your videos up.</p>
   </header>
@@ -219,6 +223,16 @@
   <p class="explain">Two rates, and the difference matters. Anything your video earns on its own pays <b>25%</b>. When we decide a video is working and put ad budget behind it, sales from that paid reach pay <b>10%</b> &mdash; a lower rate on volume you would never have reached on your own.</p>
 
   <section>
+    <div class="shead"><h2>Why this shop converts</h2><span class="count">real buyer signals</span></div>
+    <div class="stats">
+      <div class="stat"><b>4.4/5</b><span>shop rating</span></div>
+      <div class="stat"><b>91.9K</b><span>reviews</span></div>
+      <div class="stat"><b>83%</b><span>positive feedback</span></div>
+    </div>
+    <p class="statnote">TikTok-verified Official Shop, Top Rated Seller. Figures are historical and can change.</p>
+  </section>
+
+  <section>
     <div class="shead"><h2>The products</h2><span class="count">03 featured</span></div>
 
     <article class="product" style="--tint:#0D8176;--tintsoft:#E3F0EE;--shotbg:#ABD6D4">
@@ -228,7 +242,7 @@
       <div class="detail">
         <span class="tag">Hero product</span>
         <h3>Liposomal Glutathione</h3>
-        <div class="sub">60 capsules &middot; 30 day supply &middot; single bottle</div>
+        <div class="sub">Daily antioxidant support &middot; 60 capsules &middot; 30 day supply &middot; single bottle</div>
 
         <div class="price">
           <span class="was">$44.99</span>
@@ -241,6 +255,12 @@
           <div><span class="lbl">Ad-driven sale &mdash; 10%</span><span class="val">$2.50</span></div>
         </div>
 
+        <div class="playbook">
+          <div class="pb"><span class="pbh">Position it</span><p>Antioxidant-focused daily wellness. Show the label and explain the liposomal format.</p></div>
+          <div class="pb"><span class="pbh">Hooks to test</span>          <p class="hookline">&ldquo;What actually is glutathione?&rdquo;</p>
+          <p class="hookline">&ldquo;Three things I check on a supplement label.&rdquo;</p></div>
+          <div class="pb"><span class="pbh">Show on camera</span><p>Real bottle &middot; readable label &middot; your routine</p></div>
+        </div>
         <div class="minihead">Claims you may use</div>
         <ul class="claims">
           <li>Enhanced absorption</li>
@@ -261,7 +281,7 @@
       <div class="detail">
         <span class="tag">Read the rules first</span>
         <h3>Beetroot 1300mg</h3>
-        <div class="sub">60 capsules &middot; 30 day supply &middot; 1300mg per serving</div>
+        <div class="sub">Active lifestyle + convenience &middot; 60 capsules &middot; 30 day supply &middot; 1300mg per serving</div>
 
         <div class="price">
           <span class="was">$36.99</span>
@@ -274,6 +294,12 @@
           <div><span class="lbl">Ad-driven sale &mdash; 10%</span><span class="val">$2.20</span></div>
         </div>
 
+        <div class="playbook">
+          <div class="pb"><span class="pbh">Position it</span><p>Beetroot without the juicing mess. Frame it around convenience and routine.</p></div>
+          <div class="pb"><span class="pbh">Hooks to test</span>          <p class="hookline">&ldquo;Beetroot without the juicing mess.&rdquo;</p>
+          <p class="hookline">&ldquo;Here&rsquo;s how I fit this into my routine.&rdquo;</p></div>
+          <div class="pb"><span class="pbh">Show on camera</span><p>Capsule size &middot; label &middot; gym-bag routine</p></div>
+        </div>
         <div class="minihead">Claims you may use</div>
         <ul class="claims">
           <li>Assists athletic performance</li>
@@ -293,7 +319,7 @@
       <div class="detail">
         <span class="tag">Best entry price</span>
         <h3>Moringa &middot; 2-Pack</h3>
-        <div class="sub">2 bottles &middot; 60 capsules each &middot; 100% pure</div>
+        <div class="sub">Plant-based wellness + routine &middot; 2 bottles &middot; 60 capsules each &middot; 100% pure</div>
 
         <div class="price">
           <span class="was">$49.99</span>
@@ -306,6 +332,12 @@
           <div><span class="lbl">Ad-driven sale &mdash; 10%</span><span class="val">$2.50</span></div>
         </div>
 
+        <div class="playbook">
+          <div class="pb"><span class="pbh">Position it</span><p>Simple plant-based supplement routine. Educate on moringa without miracle claims.</p></div>
+          <div class="pb"><span class="pbh">Hooks to test</span>          <p class="hookline">&ldquo;I kept seeing moringa, so I looked it up.&rdquo;</p>
+          <p class="hookline">&ldquo;Here is what the label actually says.&rdquo;</p></div>
+          <div class="pb"><span class="pbh">Show on camera</span><p>Actual bottle &middot; ingredients &middot; morning routine</p></div>
+        </div>
         <div class="minihead">Claims you may use</div>
         <ul class="claims">
           <li>Supports a good night&rsquo;s sleep</li>
@@ -348,6 +380,42 @@
         <p>Show the product inside a real routine rather than alone on a counter. Lowest production cost of any angle and a consistently steady performer.</p>
         <div class="hook">&ldquo;My 6am stack, in the order I actually take it.&rdquo;</div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><h2>Content that moves the needle</h2><span class="count">every video</span></div>
+    <div class="formula">
+      <div><b>01</b><p>Lead with one clear question or a relatable problem.</p></div>
+      <div><b>02</b><p>Show the real product in the first few seconds.</p></div>
+      <div><b>03</b><p>Explain one accurate fact, or one genuine experience.</p></div>
+      <div><b>04</b><p>Tag the correct product and invite viewers to learn more.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><h2>Your first 7 days</h2><span class="count">start here</span></div>
+    <div class="seven">
+      <div><b>01</b><p>Pick one product and learn its label.</p></div>
+      <div><b>02</b><p>Read the reviews. Write three different hooks.</p></div>
+      <div><b>03</b><p>Film three videos with the real product in hand.</p></div>
+      <div><b>04</b><p>Post with the right SKU tagged and the paid-promotion disclosure on.</p></div>
+      <div><b>05</b><p>Test a different hook. Track clicks and sales.</p></div>
+      <div><b>06</b><p>Check Trybe and Get Boosted for current opportunities.</p></div>
+      <div><b>07</b><p>Share a win or a lesson in #wins. Then repeat.</p></div>
+    </div>
+    <p class="statnote">Real beats perfect. Learn, post, improve.</p>
+  </section>
+
+  <section>
+    <div class="shead"><h2>Where to go in Discord</h2><span class="count">your next step</span></div>
+    <div class="chan">
+      <div><code>#announcements</code><span>Launches and important updates</span></div>
+      <div><code>#wins</code><span>Share results and lessons</span></div>
+      <div><code>#trybe</code><span>Submit eligible content for ad use</span></div>
+      <div><code>#get-boosted</code><span>Check current ad opportunities</span></div>
+      <div><code>#full-course-guides / #recordings</code><span>Learn the system</span></div>
+      <div><code>#questions-chat / #violation-help</code><span>Get support</span></div>
     </div>
   </section>
 
@@ -425,6 +493,8 @@
       </div>
     </div>
   </section>
+
+  <div class="rhythm"><span>Learn &middot; Create &middot; Test &middot; Repeat</span><span>Rosabella Creator Field Guide</span></div>
 
   <p class="footnote">Prices change during campaign periods &mdash; check the live listing before filming a price callout.</p>
 
