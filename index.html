@@ -45,15 +45,15 @@ section.band{background:transparent}
 .mut{color:var(--mut)}
 
 /* hero band: logo + headline + rates, full-bleed gradient */
-.herobox{position:relative;padding:46px 0 54px;margin-bottom:38px;color:#fff}
+.herobox{position:relative;padding:52px 0 56px;margin-bottom:38px;color:#fff}
 .herobox:before{content:"";position:absolute;inset:0 -100vmax;background-image:var(--grad);z-index:-2}
 .herobox:after{content:"";position:absolute;right:-40px;top:-170px;width:480px;height:480px;
   border-radius:50%;border:2px solid rgba(255,255,255,.16);z-index:-1;pointer-events:none}
-.mh{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.mh .logo{height:44px;width:auto}
-.mh-label{font-family:var(--ui);font-weight:700;font-size:13px;letter-spacing:.2em;
+.mh{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.mh .logo{height:clamp(56px,7.5vw,88px);width:auto}
+.mh-label{font-family:var(--ui);font-weight:700;font-size:14px;letter-spacing:.2em;
   text-transform:uppercase;color:rgba(255,255,255,.8)}
-.herobox h1{font-size:clamp(38px,6.6vw,62px);line-height:1.04;margin:34px 0 0;color:#fff}
+.herobox h1{font-size:clamp(38px,6.6vw,62px);line-height:1.04;margin:40px 0 0;color:#fff}
 .herobox .lede{font-size:19px;margin:22px 0 0;max-width:50ch;color:rgba(255,255,255,.93)}
 .herobox .rates{font-family:var(--ui);font-weight:700;font-size:16px;margin:22px 0 0;color:#fff}
 .herobox .rates a{color:#fff;text-underline-offset:4px}
