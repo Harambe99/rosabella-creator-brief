@@ -39,6 +39,10 @@ a{color:inherit}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 hr{border:0;border-top:1px solid var(--line);margin:54px 0}
 section{position:relative;padding:54px 0}
+.sep{position:relative;height:1px;background:var(--line);margin:0}
+.sep:before{content:"";position:absolute;left:0;top:-1.5px;width:68px;height:4px;
+  background-image:var(--grad);border-radius:3px}
+.band + .sep, .sep + .band{background:transparent}
 section.band{background:var(--alt)}
 section.band:before{content:"";position:absolute;inset:0 -100vmax;background:var(--alt);z-index:-1}
 section.band{background:transparent}
@@ -46,9 +50,10 @@ section.band{background:transparent}
 
 /* hero band: logo + headline + rates, full-bleed gradient */
 .herobox{position:relative;padding:52px 0 56px;margin-bottom:38px;color:#fff}
-.herobox:before{content:"";position:absolute;inset:0 -100vmax;background-image:var(--grad);z-index:-2}
-.herobox:after{content:"";position:absolute;right:-40px;top:-170px;width:480px;height:480px;
-  border-radius:50%;border:2px solid rgba(255,255,255,.16);z-index:-1;pointer-events:none}
+.herobox:before{content:"";position:absolute;inset:0 -100vmax;z-index:-2;
+  background-image:linear-gradient(100deg,rgba(7,36,54,.86) 0%,rgba(7,36,54,.60) 46%,rgba(7,36,54,.20) 82%),url("img/banner.jpg");
+  background-size:cover;background-position:center}
+
 .mh{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
 .mh .logo{height:clamp(56px,7.5vw,88px);width:auto}
 .mh-label{font-family:var(--ui);font-weight:700;font-size:14px;letter-spacing:.2em;
@@ -203,7 +208,6 @@ textarea::placeholder{color:var(--faint)}
   .herobox h1{margin:26px 0 0;line-height:1.06}
   .herobox .lede{font-size:17px;margin:16px 0 0}
   .herobox .rates{font-size:15px;margin:18px 0 0}
-  .herobox:after{width:300px;height:300px;right:-110px;top:-120px}
   section{padding:38px 0}
 
   /* product cards: image left, name + price stacked right */
@@ -291,6 +295,7 @@ textarea::placeholder{color:var(--faint)}
 <a class="chip" href="#post">Before you post</a></nav>
 
 
+  <div class="sep" style="margin-top:34px"></div>
   <section id="talking">
     <div class="phead">
       <img id="dImg" alt="">
@@ -323,6 +328,7 @@ textarea::placeholder{color:var(--faint)}
   </section>
 
 
+  <div class="sep"></div>
   <section id="inspo" class="band">
     <h2 style="font-size:clamp(27px,4.4vw,38px)">Video inspo for <span id="dShort2"></span></h2>
     <p class="mut" style="margin-top:10px;max-width:60ch">Every concept uses the same skeleton: hook in the first two seconds, show the product, say a label claim, say results vary, then send people to the link. Open a concept, then step through the beats.</p>
@@ -338,6 +344,7 @@ textarea::placeholder{color:var(--faint)}
   </section>
 
 
+  <div class="sep"></div>
   <section id="earn">
     <h2 style="font-size:clamp(27px,4.4vw,38px)">What a video can earn</h2>
     <p style="margin-top:14px"><b style="font-family:var(--ui)">25% on organic sales.</b> Everything your video earns on its own.</p>
@@ -363,6 +370,7 @@ textarea::placeholder{color:var(--faint)}
   </section>
 
 
+  <div class="sep"></div>
   <section id="check" class="band">
     <h2 style="font-size:clamp(27px,4.4vw,38px)">Script check</h2>
     <p class="mut" style="margin-top:12px;max-width:62ch">Paste a script or caption. This screens it against the takedown list and the content rules. It is a quick check, not an approval.</p>
@@ -376,6 +384,7 @@ textarea::placeholder{color:var(--faint)}
   </section>
 
 
+  <div class="sep"></div>
   <section id="rules">
     <h2 style="font-size:clamp(27px,4.4vw,38px)">Rules that keep videos up</h2>
     <p class="mut" style="margin-top:12px;max-width:66ch">Supplements, not medicine. Phrasing that implies treating, curing or managing a condition puts the video and your account at risk, and if we have put spend behind it, that spend is lost too.</p>
@@ -410,6 +419,7 @@ textarea::placeholder{color:var(--faint)}
   </section>
 
 
+  <div class="sep"></div>
   <section id="post" class="band">
     <h2 style="font-size:clamp(27px,4.4vw,38px)">Before you post</h2>
     <div class="prog" id="prog"></div>
