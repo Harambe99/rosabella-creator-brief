@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Rosabella Creator Brief</title>
 <meta name="description" content="What to film, what to say, and what you earn. Rosabella TikTok Shop creator brief.">
-<meta name="theme-color" content="#F1F7F6">
+<meta name="theme-color" content="#F8F5F0">
 <link rel="icon" href="img/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta property="og:title" content="Rosabella Creator Brief">
@@ -20,11 +20,11 @@
 @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/poppins-600.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/poppins-700.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 :root{
-  --bg:#F1F7F6; --panel:#FFFFFF; --panel2:#F3F9F8; --line:#D5E4E2;
-  --ink:#0B2A3C; --mut:#4D6977; --faint:#8AA3AE;
-  --pink:#0D8176; --pink-dim:#0A6960; --pinkbg:#E3F0EE;
+  --bg:#F8F5F0; --alt:#F0EBE3; --panel:#FFFFFF; --panel2:#F6F2EC; --line:#E0D8CC;
+  --ink:#16252E; --mut:#5C6B74; --faint:#93A0A8;
+  --pink:#0D8176; --pink-dim:#0A6960; --pinkbg:#E8F0EC;
   --grad:linear-gradient(118deg,#1666AB 0%,#0D8176 52%,#0E8F5E 100%);
-  --good:#0E7A42; --goodbg:#E2F2E8; --bad:#B3243F; --badbg:#FBE7EB;
+  --good:#15703F; --goodbg:#E6F0E4; --bad:#A8273F; --badbg:#F8E8E6;
   --disp:"Poppins","Avenir Next",system-ui,sans-serif;
   --serif:"Fraunces",Georgia,serif;
   --ui:"Inter","Avenir Next",system-ui,sans-serif;
@@ -38,18 +38,24 @@ h1,h2,h3,h4,.disp{font-family:var(--disp);font-weight:700;letter-spacing:-.025em
 a{color:inherit}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 hr{border:0;border-top:1px solid var(--line);margin:54px 0}
+section{position:relative;padding:54px 0}
+section.band{background:var(--alt)}
+section.band:before{content:"";position:absolute;inset:0 -100vmax;background:var(--alt);z-index:-1}
+section.band{background:transparent}
 .mut{color:var(--mut)}
 
 /* masthead */
-.masthead{margin:22px -22px 0;padding:26px 30px;background-image:var(--grad);
+.masthead{margin:0 -22px 0;padding:52px 38px 48px;background-image:var(--grad);
   background-size:cover;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
   border-radius:0 0 3px 3px;position:relative;overflow:hidden}
-.masthead:after{content:"";position:absolute;right:-90px;top:-130px;width:330px;height:330px;
-  border-radius:50%;border:2px solid rgba(255,255,255,.18)}
-.masthead .logo{height:30px;width:auto;position:relative}
-.mh-label{font-family:var(--ui);font-weight:700;font-size:13px;letter-spacing:.16em;
+  .masthead:after{content:"";position:absolute;right:-110px;top:-170px;width:460px;height:460px;
+  border-radius:50%;border:2px solid rgba(255,255,255,.17)}
+  .masthead:before{content:"";position:absolute;right:40px;bottom:-200px;width:360px;height:360px;
+  border-radius:50%;border:2px solid rgba(255,255,255,.1)}
+.masthead .logo{height:46px;width:auto;position:relative}
+.mh-label{font-family:var(--ui);font-weight:700;font-size:13.5px;letter-spacing:.2em;
   text-transform:uppercase;color:rgba(255,255,255,.82);position:relative}
-.hero{padding-top:4px}
+.hero{padding-top:34px}
 .hero h1{font-size:clamp(38px,6.6vw,62px);line-height:1.04;margin:16px 0 0}
 .pcard[aria-pressed="true"]{border-color:var(--acc,var(--pink));background:#fff;box-shadow:0 0 0 1px var(--acc,var(--pink))}
 .hero p.lede{font-size:19px;color:var(--ink);margin:20px 0 0;max-width:46ch}
@@ -60,11 +66,11 @@ hr{border:0;border-top:1px solid var(--line);margin:54px 0}
 .picker{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 0}
 .pcard{background:var(--panel);border:1.5px solid var(--line);border-radius:16px;
   padding:16px 14px 18px;text-align:center;transition:border-color .15s,background .15s}
-.pcard:hover{border-color:#2C4A62}
+.pcard:hover{border-color:#C9BDAC}
 .pcard[aria-pressed="true"]{border-color:var(--pink);background:var(--pinkbg)}
-.pcard .plate{background:var(--panel2);border-radius:12px;padding:8px;margin-bottom:10px}
+.pcard .plate{background:var(--panel2);border-radius:14px;padding:14px 10px;margin-bottom:12px}
 .pcard[aria-pressed="true"] .plate{background:color-mix(in srgb,var(--acc,var(--pink)) 9%,#fff)}
-.pcard img{width:100%;max-width:118px;height:104px;object-fit:contain;display:block;margin:0 auto}
+.pcard img{width:100%;max-width:168px;height:186px;object-fit:contain;display:block;margin:0 auto}
 .pcard b{display:block;font-family:var(--disp);font-size:16px;letter-spacing:-.02em}
 .pcard span{display:block;color:var(--mut);font-size:14px;margin-top:3px}
 
@@ -73,12 +79,12 @@ hr{border:0;border-top:1px solid var(--line);margin:54px 0}
 .chip{display:inline-block;font-family:var(--ui);font-weight:700;font-size:14.5px;
   padding:9px 18px;border:1.5px solid var(--line);border-radius:999px;color:var(--ink);
   text-decoration:none;white-space:nowrap;transition:border-color .15s,background .15s}
-.chip:hover{border-color:#2C4A62}
+.chip:hover{border-color:#C9BDAC}
 .chip[aria-pressed="true"],.chip.on{background:var(--acc,var(--pink));border-color:var(--acc,var(--pink));color:#FFFFFF}
 
 /* product detail */
-.phead{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:start;margin-top:34px}
-.phead img{width:96px;height:124px;object-fit:contain;background:var(--panel2);border-radius:12px;padding:6px}
+.phead{display:grid;grid-template-columns:168px 1fr;gap:26px;align-items:start;margin-top:34px}
+.phead img{width:168px;height:214px;object-fit:contain;background:var(--panel2);border-radius:16px;padding:14px 10px}
 .tagpill{display:inline-block;font-family:var(--ui);font-weight:700;font-size:12.5px;
   background:var(--panel2);padding:6px 12px;border-radius:8px;color:var(--ink)}
 .phead h2{font-size:clamp(28px,4.4vw,40px);margin:10px 0 0}
@@ -126,9 +132,9 @@ ul.pts li{margin:9px 0}
 .phone{background:var(--panel2);border:1px solid var(--line);border-radius:16px;height:200px;position:relative;
   display:flex;align-items:flex-end;justify-content:center;padding:14px;overflow:hidden}
 .phone .num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  font-family:var(--disp);font-size:76px;color:#0B2A3C14;font-weight:700}
+  font-family:var(--disp);font-size:80px;color:#16252E16;font-weight:700}
 .phone .dots{position:absolute;top:12px;left:12px;right:12px;display:flex;gap:4px}
-.phone .dots i{flex:1;height:3px;border-radius:2px;background:#0B2A3C20}
+.phone .dots i{flex:1;height:3px;border-radius:2px;background:#16252E22}
 .phone .dots i.on{background:var(--pink)}
 .phone .cap{position:relative;background:transparent;color:var(--mut);font-family:var(--ui);
   font-weight:700;font-size:13px;padding:8px 10px;border-radius:8px;text-align:center;line-height:1.35}
@@ -196,11 +202,11 @@ textarea::placeholder{color:var(--faint)}
 
 @media (max-width:760px){
   .picker{grid-template-columns:1fr;gap:11px}
-  .pcard{display:grid;grid-template-columns:86px 1fr;align-items:center;text-align:left;gap:14px;padding:12px}
+  .pcard{display:grid;grid-template-columns:112px 1fr;align-items:center;text-align:left;gap:16px;padding:14px}
   .pcard .plate{margin:0;padding:6px}
-  .pcard img{max-width:74px;height:74px;margin:0}
+  .pcard img{max-width:100px;height:124px;margin:0}
   .phead{grid-template-columns:1fr}
-  .phead img{width:84px;height:108px}
+  .phead img{width:140px;height:178px}
   .pays,.rulecols{grid-template-columns:1fr}
   .beatwrap{grid-template-columns:1fr}
   .phone{height:168px;max-width:150px}
@@ -232,7 +238,6 @@ textarea::placeholder{color:var(--faint)}
 <a class="chip" href="#rules">Rules</a>
 <a class="chip" href="#post">Before you post</a></nav>
 
-  <hr>
 
   <section id="talking">
     <div class="phead">
@@ -265,9 +270,8 @@ textarea::placeholder{color:var(--faint)}
     <ul class="pts" id="dCam"></ul>
   </section>
 
-  <hr>
 
-  <section id="inspo">
+  <section id="inspo" class="band">
     <h2 style="font-size:clamp(27px,4.4vw,38px)">Video inspo for <span id="dShort2"></span></h2>
     <p class="mut" style="margin-top:10px;max-width:60ch">Every concept uses the same skeleton: hook in the first two seconds, show the product, say a label claim, say results vary, then send people to the link. Open a concept, then step through the beats.</p>
     <div class="chips" style="margin-top:18px">
@@ -281,7 +285,6 @@ textarea::placeholder{color:var(--faint)}
     <div id="concepts"></div>
   </section>
 
-  <hr>
 
   <section id="earn">
     <h2 style="font-size:clamp(27px,4.4vw,38px)">What a video can earn</h2>
@@ -307,9 +310,8 @@ textarea::placeholder{color:var(--faint)}
 <div class="tl"><b>Day 2 to 14: we review and boost</b><p>Videos showing real return get ad budget behind them, and strong performers get scaled further.</p></div>
   </section>
 
-  <hr>
 
-  <section id="check">
+  <section id="check" class="band">
     <h2 style="font-size:clamp(27px,4.4vw,38px)">Script check</h2>
     <p class="mut" style="margin-top:12px;max-width:62ch">Paste a script or caption. This screens it against the takedown list and the content rules. It is a quick check, not an approval.</p>
     <div style="font-family:var(--ui);font-weight:700;font-size:14px;margin:18px 0 8px">Your script or caption</div>
@@ -321,7 +323,6 @@ textarea::placeholder{color:var(--faint)}
     <div id="verdict">Paste a script to check it.</div>
   </section>
 
-  <hr>
 
   <section id="rules">
     <h2 style="font-size:clamp(27px,4.4vw,38px)">Rules that keep videos up</h2>
@@ -356,9 +357,8 @@ textarea::placeholder{color:var(--faint)}
     <p class="mut" style="max-width:64ch">Send the sample request from the product page in Seller Center, not by DM. We review your account for recent posting activity, audience fit and category.</p>
   </section>
 
-  <hr>
 
-  <section id="post">
+  <section id="post" class="band">
     <h2 style="font-size:clamp(27px,4.4vw,38px)">Before you post</h2>
     <div class="prog" id="prog"></div>
     <div id="checklist" style="margin-top:10px"></div>
